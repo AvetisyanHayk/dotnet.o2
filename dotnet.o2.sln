@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet.o2", "dotnet.o2\dotnet.o2.csproj", "{352438B2-5392-4AAF-B631-E05A28BDB182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet.o2", "dotnet.o2\dotnet.o2.csproj", "{352438B2-5392-4AAF-B631-E05A28BDB182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHobbies", "MyHobbies\MyHobbies.csproj", "{667A362E-E85D-42CB-844F-2295DA349ACB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{352438B2-5392-4AAF-B631-E05A28BDB182}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{352438B2-5392-4AAF-B631-E05A28BDB182}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{352438B2-5392-4AAF-B631-E05A28BDB182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667A362E-E85D-42CB-844F-2295DA349ACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667A362E-E85D-42CB-844F-2295DA349ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667A362E-E85D-42CB-844F-2295DA349ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667A362E-E85D-42CB-844F-2295DA349ACB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
