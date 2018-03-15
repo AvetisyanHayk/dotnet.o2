@@ -67,5 +67,10 @@ namespace dotnet.o2.Controllers
             return Redirect("/Band/Lijst");
         }
 
+        public JsonResult JSLijst()
+        {
+            return Json(model.GetAll());
+        }
+
     }
 }

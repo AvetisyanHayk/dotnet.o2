@@ -31,6 +31,7 @@ namespace dotnet.o2
             }
 
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
         }
     }
 }

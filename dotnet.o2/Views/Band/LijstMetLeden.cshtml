@@ -23,19 +23,26 @@
     <ul>
         @foreach (Band band in ViewBag.Bands)
         {
-        <li>
-            @band
-            <br />Bandleden:
-            <ul>
-                @foreach (BandLid lid in band.BandLeden)
-        {
-            <li>@lid</li>
-}
-            </ul>
-            <a href="/BandLid/Maak?band=@band.Naam">Nieuwe lid toevoegen</a>
-        </li>
+            <li>
+                @band
+                <br />Bandleden:
+                <ul>
+                    @foreach (BandLid lid in band.BandLeden)
+                    {
+                        <li>@lid</li>
+                    }
+                </ul>
+                <a href="/BandLid/Maak?band=@band.Naam">Nieuwe lid toevoegen</a>
+            </li>
         }
     </ul>
+    <hr />
+    <strong>JSON</strong>
+    <ul id="json-lijst-met-leden"></ul>
+
     <a href="/Band/Lijst">Verberg bandleden</a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/assets/js/script.js"></script>
 </body>
 </html>
