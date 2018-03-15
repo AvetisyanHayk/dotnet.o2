@@ -1,0 +1,41 @@
+﻿@using MyHobbies;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LijstMetLeden</title>
+</head>
+<body>
+    <header>
+        <h1>Band > Lijst met leden</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Band">Band</a></li>
+            </ul>
+        </nav>
+    </header>
+    <ul>
+        @foreach (Band band in ViewBag.Bands)
+        {
+        <li>
+            @band
+            <br />Bandleden:
+            <ul>
+                @foreach (BandLid lid in band.BandLeden)
+        {
+            <li>@lid</li>
+}
+            </ul>
+            <a href="/BandLid/Maak?band=@band.Naam">Nieuwe lid toevoegen</a>
+        </li>
+        }
+    </ul>
+    <a href="/Band/Lijst">Verberg bandleden</a>
+</body>
+</html>

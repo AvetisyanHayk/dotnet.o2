@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nieuwe bandlid</title>
+</head>
+<body>
+    <header>
+        <h1>Bandlid toevoegen</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Band">Band</a></li>
+            </ul>
+        </nav>
+    </header>
+    @if (ViewBag.Band != null)
+    {
+        <h2>@ViewBag.Band</h2>
+
+        <form method="post">
+            <fieldset>
+                <legend>Bandlid</legend>
+                <label for="naam">naam</label>
+                <input type="text" id="naam" name="naam" required="required" />
+
+                <label for="leeftijd">Leeftijd</label>
+                <input type="number" id="leeftijd" name="leeftijd" min="1" max="120" required="required" />
+                <label>
+                    <input type="radio" name="geslacht" value="Man" /> Man
+                </label>
+                <label>
+                    <input type="radio" name="geslacht" value="Vrouw" /> Vrouw
+                </label>
+                <button type="submit">Nieuwe lid toevoegen</button>
+            </fieldset>
+        </form>
+    }
+    <a href="/Band/LijstMetLeden">Terugkeren</a>
+</body>
+</html>

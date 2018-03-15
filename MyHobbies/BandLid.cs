@@ -6,6 +6,7 @@ namespace MyHobbies
 {
     public enum Geslacht
     {
+        Undefined,
         Man,
         Vrouw
     }
@@ -14,16 +15,16 @@ namespace MyHobbies
         public string Naam { get; set; }
         public int Leeftijd { get; set; }
         public Geslacht Geslacht { get; set; }
-        public bool isAlive { get; set; }
+        public bool IsAlive { get; set; }
 
         public BandLid()
         {
-            this.isAlive = true;
+            this.IsAlive = true;
         }
 
         public override string ToString()
         {
-            return $"Naam: {Naam}, Leeftijd: {Leeftijd}, Geslacht: {Geslacht}, is alive: {isAlive}";
+            return $"Naam: {Naam}, Leeftijd: {Leeftijd}, Geslacht: {Geslacht}, is alive: {IsAlive}";
         }
     }
 }

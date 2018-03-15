@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Make</title>
+</head>
+<body>
+    <header>
+        <h1>Nieuwe Band</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Band">Band</a></li>
+            </ul>
+        </nav>
+    </header>
+    @if (ViewBag.Band != null)
+    {
+        <h2>@ViewBag.Band</h2>
+        <form method="post" action="/Band/Maak">
+            <fieldset>
+                <legend>Nieuwe Band Info</legend>
+                <label for="band">Band</label>
+                <input type="text" id="naam" name="naam" value="@ViewBag.Band.Naam" required="required" />
+                <label for="jaar">Jaar</label>
+                <input type="number" id="jaar" name="jaar" value="@ViewBag.Band.Jaar" min="@MyHobbies.Band.MIN_JAAR" max="@MyHobbies.Band.MaxJaar()" required="required" />
+                <button type="submit">Toevoegen</button>
+            </fieldset>
+        </form>
+    }
+    <a href="/Band/Lijst">Terugkeren</a>
+</body>
+</html>
